@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="2" parallel="tests">
+	<test name="CrossTest1-firefox">
+		<parameter name="BROWSER" value="firefox"></parameter>
+		<classes>
+			<class name="com.OrgwithTestng.CreateOrganizationTest" />
+			<class name="com.ContactWithTestng.CreateContactTest" />
+		</classes>
+	</test> <!--
+	CrossTest1-firefox -->
+
+	<test name="CrossTest2-chrome">
+		<parameter name="BROWSER" value="chrome"></parameter>
+		<classes>
+			<class name="com.OrgwithTestng.CreateOrganizationTest" />
+			<class name="com.ContactWithTestng.CreateContactTest" />
+		</classes>
+	</test> <!--
+	CrossTest1-chrome -->
+</suite> <!--
+Suite -->

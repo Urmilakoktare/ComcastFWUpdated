@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-01-17T11:11:51 IST" name="Suite" finished-at="2025-01-17T11:12:32 IST" duration-ms="41347">
+    <groups>
+      <group name="smokeTest">
+        <method signature="CreateContactTest.CreateContact()[pri:0, instance:com.comcast.crm.ExtentReport.CreateContactTest@3c19aaa5]" name="CreateContact" class="com.comcast.crm.ExtentReport.CreateContactTest"/>
+      </group> <!-- smokeTest -->
+    </groups>
+    <test started-at="2025-01-17T11:11:51 IST" name="Test" finished-at="2025-01-17T11:12:32 IST" duration-ms="41347">
+      <class name="com.comcast.crm.ExtentReport.CreateContactTest">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.comcast.crm.ExtentReport.CreateContactTest@3c19aaa5]" started-at="2025-01-17T11:11:51 IST" name="configBS" finished-at="2025-01-17T11:11:51 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBS -->
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.comcast.crm.ExtentReport.CreateContactTest@3c19aaa5]" started-at="2025-01-17T11:11:51 IST" name="configBC" finished-at="2025-01-17T11:11:54 IST" duration-ms="3475" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBC -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.comcast.crm.ExtentReport.CreateContactTest@3c19aaa5]" started-at="2025-01-17T11:11:54 IST" name="configBM" finished-at="2025-01-17T11:12:09 IST" duration-ms="14151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="CreateContact()[pri:0, instance:com.comcast.crm.ExtentReport.CreateContactTest@3c19aaa5]" started-at="2025-01-17T11:12:09 IST" name="CreateContact" finished-at="2025-01-17T11:12:26 IST" duration-ms="16975" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateContact -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.comcast.crm.ExtentReport.CreateContactTest@3c19aaa5]" started-at="2025-01-17T11:12:26 IST" name="configAM" finished-at="2025-01-17T11:12:32 IST" duration-ms="6165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.comcast.crm.ExtentReport.CreateContactTest@3c19aaa5]" started-at="2025-01-17T11:12:32 IST" name="configAC" finished-at="2025-01-17T11:12:32 IST" duration-ms="524" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.comcast.crm.ExtentReport.CreateContactTest@3c19aaa5]" started-at="2025-01-17T11:12:32 IST" name="configAS" finished-at="2025-01-17T11:12:32 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAS -->
+      </class> <!-- com.comcast.crm.ExtentReport.CreateContactTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
