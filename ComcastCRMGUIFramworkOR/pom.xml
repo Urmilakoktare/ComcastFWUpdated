@@ -13,7 +13,7 @@
 
 	<profiles>
 		<profile>
-			<id>smokeTest</id>
+			<id>ST</id>
 			<build>
 				<plugins>
 					<plugin>
@@ -31,7 +31,7 @@
 		</profile>
 
 		<profile>
-			<id>RTest</id>
+			<id>RRT</id>
 			<build>
 				<plugins>
 					<plugin>
@@ -68,7 +68,7 @@
 		</profile>
 		
 			<profile>
-			<id>crossBrowser</id>
+			<id>CBT</id>
 			<build>
 				<plugins>
 					<plugin>
@@ -86,7 +86,7 @@
 		</profile>
 		
 		<profile>
-			<id>batchexe</id>
+			<id>Batch</id>
 			<build>
 				<plugins>
 					<plugin>
@@ -103,7 +103,7 @@
 			</build>
 		</profile>
 		<profile>
-			<id>distributedexe</id>
+			<id>DP</id>
 			<build>
 				<plugins>
 					<plugin>
