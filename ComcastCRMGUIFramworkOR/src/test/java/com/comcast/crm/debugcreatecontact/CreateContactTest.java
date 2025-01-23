@@ -11,35 +11,34 @@ import com.comcast.crm.OR_Pom.HomePage;
 import com.comcast.crm.OR_Pom.OrganizationPage;
 import com.comcast.crm.OR_Pom.creatingNewContact;
 import com.comcast.crm.generic.webdriverutility.UtilityClassObject;
-import com.comcast.crm.listenersUtility.ListnerImplementClass;
-
 import crm.comcast.crm.basetest.BaseClass;
+
 @Listeners(com.comcast.crm.listenersUtility.ListnerImplementClass.class)
 public class CreateContactTest extends BaseClass {
 
 	@Test(groups = "smokeTest")
 	public void CreateContact() throws Throwable {
-		
-		UtilityClassObject.getTest().log(Status.INFO,"read data from excel");
+
+		UtilityClassObject.getTest().log(Status.INFO, "read data from excel");
 		// read testScript data from excelFile
 
 		String lastName = eLib.getDataFromExcel("contact", 1, 2) + jLib.getRandomNumber();
 
 		// navigate to Contact module
-		UtilityClassObject.getTest().log(Status.INFO,"Navigate to contact module");
+		UtilityClassObject.getTest().log(Status.INFO, "Navigate to contact module");
 		HomePage hp = new HomePage(driver);
 		hp.getContactlink().click();
 
 		// click on create Contact button
-		UtilityClassObject.getTest().log(Status.INFO,"Click on create contct button");
+		UtilityClassObject.getTest().log(Status.INFO, "Click on create contct button");
 		ContactPage cp = new ContactPage(driver);
 		cp.getCreateNewcontactBtn().click();
 
 		// enter all the details and create new contact
-		UtilityClassObject.getTest().log(Status.INFO,"Create a new contact");
+		UtilityClassObject.getTest().log(Status.INFO, "Create a new contact");
 		creatingNewContact cnp = new creatingNewContact(driver);
 		cnp.createContact(lastName);
-		UtilityClassObject.getTest().log(Status.INFO,lastName +"=====>create a new contact");
+		UtilityClassObject.getTest().log(Status.INFO, lastName + "=====>create a new contact");
 
 		// verify header lastname Expected Result
 

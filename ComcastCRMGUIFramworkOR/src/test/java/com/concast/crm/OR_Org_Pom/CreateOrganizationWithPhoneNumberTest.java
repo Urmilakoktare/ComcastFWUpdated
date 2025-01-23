@@ -32,7 +32,7 @@ import com.comcast.crm.generic.fileutility.FileUtility;
 import com.comcast.crm.generic.webdriverutility.JavaUtility;
 import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
 
-public class CreateOrganizationWithPhoneNumber {
+public class CreateOrganizationWithPhoneNumberTest {
 	public static void main(String[] args) throws Throwable {
 		// read data from property file
 		//create a object

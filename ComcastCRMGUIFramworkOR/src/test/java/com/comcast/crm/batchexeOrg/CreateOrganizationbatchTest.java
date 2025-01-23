@@ -12,7 +12,7 @@ import com.comcast.crm.OR_Pom.OrganizationPage;
 import crm.comcast.crm.basetest.BaseClass;
 
 
-public class CreateOrganizationTest2exbc extends BaseClass {
+public class CreateOrganizationbatchTest extends BaseClass {
 	
 	@Test(groups ="smokeTest")
 	public void createOrgTest() throws Throwable {

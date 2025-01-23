@@ -7,7 +7,7 @@ import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
-public class Excel {
+public class ExcelTest {
 	public int getRows(String sheet) throws EncryptedDocumentException, IOException {
 		
 		FileInputStream fis = new FileInputStream("./testdata/testScriptdata.xlsx");

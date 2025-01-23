@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-public class SampleTestWithPom {
+public class SampleTestWithPomTest {
 	    
 	
 	   @FindBy(name="user_name")
@@ -28,7 +28,7 @@ public class SampleTestWithPom {
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://localhost:8888/");
 		
-		SampleTestWithPom s = PageFactory.initElements(driver,SampleTestWithPom.class);
+		SampleTestWithPomTest s = PageFactory.initElements(driver,SampleTestWithPomTest.class);
 		
 		
 		s.ele1.sendKeys("admin");

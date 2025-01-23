@@ -9,9 +9,9 @@ import com.comcast.crm.OR_Pom.OrganizationPage;
 
 import crm.comcast.crm.basetest.BaseClass;
 
-public class CreateOrganizationTest extends BaseClass{
-	@Test(groups="smokeTest")
-	public void createOrgTest() throws Throwable{
+public class CreateOrganizationTest extends BaseClass {
+	@Test(groups = "smokeTest")
+	public void createOrgTest() throws Throwable {
 		// read testScript data from excelFile
 
 		String orgName = eLib.getDataFromExcel("org", 1, 2) + jLib.getRandomNumber();
@@ -30,7 +30,7 @@ public class CreateOrganizationTest extends BaseClass{
 		cnop.createOrg(orgName);
 
 		// verify header msg Expected Result
-        Thread.sleep(3000);
+		Thread.sleep(3000);
 		String headerMsg = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
 		if (headerMsg.contains(orgName)) {
 			System.out.println(orgName + " is created==PASS");
@@ -51,67 +51,65 @@ public class CreateOrganizationTest extends BaseClass{
 
 	@Test(groups = "regresionTest")
 	public void creatOrgWithInd() throws Throwable {
-			// read testScript data from excelFile
-			String orgName = eLib.getDataFromExcel("org", 4, 2) + jLib.getRandomNumber();
-			String industry = eLib.getDataFromExcel("org", 4, 3);
-		
-			// navigate to organization module
-			HomePage hp = new HomePage(driver);
-			hp.getOrgLink().click();
+		// read testScript data from excelFile
+		String orgName = eLib.getDataFromExcel("org", 4, 2) + jLib.getRandomNumber();
+		String industry = eLib.getDataFromExcel("org", 4, 3);
 
-			// click on create organisation button
-			OrganizationPage op = new OrganizationPage(driver);
-			op.getCreateNewOrgBtn().click();
+		// navigate to organization module
+		HomePage hp = new HomePage(driver);
+		hp.getOrgLink().click();
 
-			// enter all the details and create new organization
+		// click on create organisation button
+		OrganizationPage op = new OrganizationPage(driver);
+		op.getCreateNewOrgBtn().click();
 
-			CreatingNewOrganization cnop = new CreatingNewOrganization(driver);
-			cnop.createOrgWithIndu(orgName, industry);
+		// enter all the details and create new organization
 
-			// verify the industry and type info
-            Thread.sleep(3000);
-			String actualIndustryDd = driver.findElement(By.id("mouseArea_Industry")).getText();
+		CreatingNewOrganization cnop = new CreatingNewOrganization(driver);
+		cnop.createOrgWithIndu(orgName, industry);
 
-			if (actualIndustryDd.equals(industry)) {
+		// verify the industry and type info
+		Thread.sleep(3000);
+		String actualIndustryDd = driver.findElement(By.id("mouseArea_Industry")).getText();
 
-				System.out.println(actualIndustryDd + " is verified==>PASS");
-			} else {
+		if (actualIndustryDd.equals(industry)) {
 
-				System.out.println(actualIndustryDd + " is not  verified==>FAIL");
-			}
+			System.out.println(actualIndustryDd + " is verified==>PASS");
+		} else {
 
-		
+			System.out.println(actualIndustryDd + " is not  verified==>FAIL");
+		}
 
 	}
 
-@Test(groups = "regresionTest")
-public void createOrgWithPhoneNumber() throws Throwable{
-	// read testScript data from excelFile
+	@Test(groups = "regresionTest")
+	public void createOrgWithPhoneNumber() throws Throwable {
+		// read testScript data from excelFile
 
-	String orgName = eLib.getDataFromExcel("org", 7, 2) + jLib.getRandomNumber();
-	String phoneNumber = eLib.getDataFromExcel("org", 7, 3);
+		String orgName = eLib.getDataFromExcel("org", 7, 2) + jLib.getRandomNumber();
+		String phoneNumber = eLib.getDataFromExcel("org", 7, 3);
 
-	// navigate to organization module
-	HomePage hp = new HomePage(driver);
-	hp.getOrgLink().click();
+		// navigate to organization module
+		HomePage hp = new HomePage(driver);
+		hp.getOrgLink().click();
 
-	// click on create organisation button
-	OrganizationPage op = new OrganizationPage(driver);
-	op.getCreateNewOrgBtn().click();
+		// click on create organisation button
+		OrganizationPage op = new OrganizationPage(driver);
+		op.getCreateNewOrgBtn().click();
 
-	// enter all the details and create new organization
+		// enter all the details and create new organization
 
-	CreatingNewOrganization cnop = new CreatingNewOrganization(driver);
-	cnop.createOrgWithPhone(orgName, phoneNumber);
+		CreatingNewOrganization cnop = new CreatingNewOrganization(driver);
+		cnop.createOrgWithPhone(orgName, phoneNumber);
 
-	// verify header phonenumber Expected Result
-	Thread.sleep(3000);
-	String phoneNumberTxt = driver.findElement(By.id("mouseArea_Phone")).getText();
-	if (phoneNumberTxt.contains(phoneNumber)) {
-		System.out.println(phoneNumber + " is created==PASS");
-	} else {
-		System.out.println(phoneNumberTxt + " is not created==FAIL");
+		// verify header phonenumber Expected Result
+		Thread.sleep(3000);
+		String phoneNumberTxt = driver.findElement(By.id("mouseArea_Phone")).getText();
+		if (phoneNumberTxt.contains(phoneNumber)) {
+			System.out.println(phoneNumber + " is created==PASS");
+		} else {
+			System.out.println(phoneNumberTxt + " is not created==FAIL");
+		}
+
 	}
-
-}
 }

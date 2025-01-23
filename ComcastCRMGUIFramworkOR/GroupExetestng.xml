@@ -12,4 +12,9 @@
       <class name="com.ContactWithTestng.CreateContactTest"/>
     </classes>
   </test> <!-- GroupTest -->
+  <listeners>
+		<listener
+			class-name="com.comcast.crm.listenersUtility.ListnerImplementClass"></listener>
+	</listeners>
+	
 </suite> <!-- Suite -->

@@ -36,14 +36,15 @@ public class CreateContactTest extends BaseClass {
 
 		// verify header lastname Expected Result
 
-		//String actLastName = driver.findElement(By.className("dvHeaderText")).getText();
-		ContactInfoPage cip= new ContactInfoPage(driver);
+		// String actLastName =
+		// driver.findElement(By.className("dvHeaderText")).getText();
+		ContactInfoPage cip = new ContactInfoPage(driver);
 		String actHeader = cip.getHeaderMsg().getText();
 		boolean status = actHeader.contains(lastName);
 		Assert.assertEquals(status, true);
-		
-		String actLastName= driver.findElement(By.id("dtlview_Last Name")).getText();
-		SoftAssert soft= new SoftAssert();
+
+		String actLastName = driver.findElement(By.id("dtlview_Last Name")).getText();
+		SoftAssert soft = new SoftAssert();
 		soft.assertEquals(actLastName, lastName);
 
 	}
